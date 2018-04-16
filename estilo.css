@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+	--corbase1: #c4caaa;
+	--corbase2: #FFF;
+	--corbase3: #333;
+	--corbase4: #aaaaaa;
+	--espacamento: 30px;
+}
+
+body {
+	background: var(--corbase3);
+	width: 600px;
+	font-family: 'Roboto', sans-serif;
+	margin: auto;
+}
+
+.barra-topo {
+	background-color: var(--corbase1);
+	padding: var(--espacamento);
+	display: flex;
+	justify-content: space-between;
+}
+
+.barra-topo span {
+	color: white;
+	text-transform: uppercase;
+}
+
+.barra-topo a {
+	color: #7e8765;
+}
+
+.cabecalho {
+	padding: var(--espacamento);
+	background-color: var(--corbase2);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cabecalho img {
+	width: 80px;
+	height: 80px;
+}
+
+.cabecalho a {
+	color: var(--cinzaescuro);
+}
+
+.banner {
+	color: white;
+}
+
+.banner img {
+	width: 100%;
+}
+
+.banner div {
+	background: #e3a459;
+	padding: var(--espacamento);
+}
+
+.banner a {
+	color: #000;
+}
+
+.banner h1 {
+	margin-top: 0;
+}
+
+.duascolunas {
+	display: flex;
+}
+
+.duascolunas div {
+	background: white;
+	padding: var(--espacamento);
+	margin: 10px 0px;
+}
+
+.duascolunas div:first-child {
+	margin-right: 5px;
+}
+
+.duascolunas div:last-child {
+	margin-left: 5px;
+}
+
+.duascolunas h2 {
+	color: var(--corbase3);
+}
+
+.duascolunas p {
+	color: var(--corbase4);
+}
+
+.botao {
+	color: white;
+	background: var(--corbase1);
+	border: 0;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: all 1s;
+}
+
+.botao:hover {
+	background: var(--corbase3);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.imagemtexto {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.imagemtexto .foto, .imagemtexto .texto {
+	width: 50%;
+}
+
+.imagemtexto .foto {
+	background-image: url("imagens/medImg.jpg");
+	background-size: cover;
+	min-height: 200px;
+}
+
+.imagemtexto .texto {
+	background: white;
+	padding: var(--espacamento);
+	box-sizing: border-box;
+}
+
+.imagemtexto .botao {
+	background: #e2a459;
+}
+
+.imagemtexto.invertido {
+	flex-direction: row-reverse;
+	margin-top: 10px;
+}
+
+.faq {
+	text-align: center;
+	background: var(--corbase1);
+	padding: var(--espacamento);
+}
+
+.faq h2 {
+	font-family: "Times New Roman";
+	width: 50%;
+	padding: 0 25%;
+	position: relative;
+	margin-top: 0;
+}
+
+.faq h2:before, .faq h2:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 25%;
+	height: 2px;
+	background-color: #a9b18a;
+	top: 50%;
+}
+
+.faq h2:before {
+	left: 0;
+}
+
+.faq h2:after {
+	right: 0;
+}
+
+.faq .botao {
+	background-color: #7e8465;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+	.duascolunas, .imagemtexto {
+		flex-direction: column !important;
+	}
+
+	.imagemtexto .foto, .imagemtexto .texto {
+		width: 100%;
+	}
+
+	.duascolunas div {
+		margin: 10px 0 0 0 !important;
+	}
+}
